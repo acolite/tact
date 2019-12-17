@@ -1,0 +1,7 @@
+## Data directory
+data_dir=./data
+grid_dir=./data/grid
+sim_dir=./data/sim
+
+##libRadtran directory
+libradtran_dir=
