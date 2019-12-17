@@ -18,9 +18,9 @@ TACT needs the user to have an account at the Research Data Archive (RDA) at the
 * Edit the tact configuration file `nano config/config.txt` and add the full path to the libRadtran directory on your system to the libradtran_dir= setting
 * Edit your .netrc file to add your RDA UCAR credentials: `nano $HOME/.netrc`
 
-    machine rda.ucar.edu
-    login $l
-    password $l
+            machine rda.ucar.edu
+            login $l
+            password $l
     
 With $l and $p your login and password respectively for the RDA.
 * run `python tact.py --input $in --output $out` where $in is the full path to an extracted L1 Landsat bundle, and $out the full path to the target output directory (which will be generated). Optionally a four coordinate bounding box (S,W,N,E) can be specified using --limit.
