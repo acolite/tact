@@ -1,7 +1,7 @@
 ## About TACT
-TACT is the Thermal Atmospheric Correction Tool for Landsat developed at RBINS. It retrieves ERA5 atmospheric profiles and uses libRadtran to compute the atmospheric transmittance, and down- and upwelling radiances. Outputs currently the Water Surface Temperature (WST) in each thermal band present on the Landsat sensor, assuming a constant (water) emissivity over the scene. The method and validation using Landsat 8/TIRS data is presented in Vanhellemont, 2020 (https://doi.org/10.1016/j.rse.2019.111518).
+TACT is the Thermal Atmospheric Correction Tool for Landsat developed at RBINS. It retrieves ERA5 atmospheric profiles and uses libRadtran to compute the atmospheric transmittance, and down- and upwelling radiances. Currently TACT outputs the Water Surface Temperature (WST) in each thermal band present on the Landsat sensor, assuming a constant (water) emissivity over the scene. The method and validation using Landsat 8/TIRS data is presented in Vanhellemont, 2020 (https://doi.org/10.1016/j.rse.2019.111518).
 
-TACT development was funded by the Belgian Science Policy Office BRAIN-be program under contract (MICROBIAN). 
+TACT development was funded by the Belgian Science Policy Office BRAIN-be program under contract BR/165/A1/MICROBIAN. 
 
 **TACT is provided by RBINS as an experimental tool, without explicit or implied warranty. Use of the program is at your own discretion and risk.**
 
@@ -22,4 +22,9 @@ TACT needs the user to have an account at the Research Data Archive (RDA) at the
             login $l
             password $l
     
-* run `python tact.py --input $in --output $out` where $in is the full path to an extracted L1 Landsat bundle, and $out the full path to the target output directory (which will be generated). Optionally a four coordinate bounding box (S,W,N,E) can be specified using --limit.
+* run `python tact.py --input $in --output $out` where $in is the full path to an extracted L1 Landsat bundle, and $out the full path to the target output directory (which will be generated).
+
+## Options
+* --limit a four coordinate bounding box (S,W,N,E) for processing of a specific region of interest
+* --export_geotiff True/False for exporting datasets as GeoTIFF
+
