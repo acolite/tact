@@ -21,7 +21,10 @@ TACT needs the user to have an account at the Research Data Archive (RDA) at the
             machine rda.ucar.edu
             login $l
             password $l
-    
+
+* Edit your .dodsrc file to point to your .netrc file: `nano $HOME/.dodsrc`. Write the full path explicitly:
+            HTTP.NETRC=/path/to/.netrc
+ 
 * run `python tact.py --input $in --output $out` where $in is the full path to an extracted L1 Landsat bundle, and $out the full path to the target output directory (which will be generated).
 
 ## Options
